@@ -16,7 +16,7 @@ class MobileBankApiTestV2 {
       .when()
           .get("/demo/accounts")
       // Проверки
-      .then()
+      .then().log().all()
           .statusCode(200)
           // .header("Content-Type", "application/json; charset=UTF-8")
           // специализированные проверки - лучше

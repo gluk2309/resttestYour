@@ -19,7 +19,7 @@ class MobileBankApiTestV5 {
       .when()
           .get("/demo/accounts")
       // Проверки
-      .then()
+      .then().log().all()
           .statusCode(200)
           .contentType(ContentType.JSON)
           .body("every{ it.balance >= 0 }", is(true))
